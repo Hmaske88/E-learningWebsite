@@ -48,11 +48,11 @@
                 {
                     echo'
                     <li class="nav-item"><a href="" class="nav-link" data-toggle="modal" data-target="#stuLoginModalCenter">Login</a></li>
+                    <li class="nav-item"><a href="" class="nav-link" data-toggle="modal" data-target="#adminLoginModalCenter">Admin Login</a></li>
                     <li class="nav-item"><a href="" class="nav-link" data-toggle="modal" data-target="#stuRegModalCenter">Signup</a></li>
                     ';
                 }
                 ?>
-                <!-- <li class="nav-item"><a href="" class="nav-link" data-toggle="modal" data-target="#adminLoginModalCenter">Admin Login</a></li> -->
 
             <li class="nav-item"><a href="stufeedback.php" class="nav-link">Feedback</a></li>
             <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
