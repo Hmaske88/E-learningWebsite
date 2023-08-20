@@ -41,35 +41,35 @@ if(isset($_REQUEST['updateStuNameBtn']))
     
     else 
     {
-    $stuName= $_REQUEST["stuName"];
-    
-    $stuOcc=$_REQUEST["stu0cc"];
-    
-    $stu_image= $_FILES['stuImg']['name'];
-    
-    $stu_image_temp = $_FILES['stuImg']['tmp_name'];
-    
-    $img_folder= '../image/stu/'.$stu_image;
-    
-    move_uploaded_file($stu_image_temp, $img_folder);
-    
-    $sql = "UPDATE student SET stu_name = '$stuName', stu_occ ='$stuOcc', stu_img = '$img_folder' WHERE stu_email ='$stuEmail'";
-    
-    if($conn->query($sql)==TRUE) 
-    {
-        // below msg display on form submit success
-        $passmsg ='<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> Updated Successfully </div>';
-    } 
-    else 
-    {
-    // below msg display on form submit failed 
-    $passmsg ='<div class="alert alert-danger col-sm-6 m1-5 mt-2" = role="alert"> Unable to Update </div>';
-    }
+        $stuName= $_REQUEST["stuName"];
+        
+        $stuOcc=$_REQUEST["stuOcc"];
+        
+        $stu_image= $_FILES['stuImg']['name'];
+        
+        $stu_image_temp = $_FILES['stuImg']['tmp_name'];
+        
+        $img_folder= '../image/stu/'.$stu_image;
+        
+        move_uploaded_file($stu_image_temp, $img_folder);
+        
+        $sql = "UPDATE student SET stu_name = '$stuName', stu_occ ='$stuOcc', stu_img = '$img_folder' WHERE stu_email ='$stuEmail'";
+        
+        if($conn->query($sql)==TRUE) 
+        {
+            // below msg display on form submit success
+            $passmsg ='<div class="alert alert-success col-sm-6 ml-5 mt-2" role="alert"> Updated Successfully </div>';
+        } 
+        else 
+        {
+            // below msg display on form submit failed 
+            $passmsg ='<div class="alert alert-danger col-sm-6 m1-5 mt-2" = role="alert"> Unable to Update </div>';
+        }
     }
 }
 ?>
 
-<div class="col-sm-6 mt-5">
+<div class="col-sm-6 mt-5 mx-3 jumbotron">
 
 <form class="mx-5" method="POST" enctype="multipart/form-data"> 
 
@@ -78,11 +78,31 @@ if(isset($_REQUEST['updateStuNameBtn']))
     <input type="text" class="form-control" id="stuId" name="stuId" value="<?php if(isset($stuId)) {echo $stuId; } ?>" readonly>
     </div>
 
+    <br>
     <div class="form-group">
     <label for="stuEmail">Email</label>
     <input type="email" class="form-control" id="stuEmail" value="<?php echo $stuEmail ?>" readonly>
     </div>
 
+    <br>
+    <div class="form-group">
+    <label for="stuName">Name</label>
+    <input type="text" class="form-control" id="stuName" name="stuName" value="<?php if(isset($row["stu_name"])) {echo $row["stu_name"];} ?>">
+    </div>
+
+    <br>
+    <div class="form-group">
+    <label for="stuOcc">Occupation</label> 
+    <input type="text" class="form-control" id="stuOcc" name="stuOcc" value="<?php if(isset($row["stu_occ"])) {echo $row["stu_occ"];} ?>"></input>
+    </div>
+
+    <br>
+    <div>
+        <label for="stuImg">Upload Image</label>
+        <input type="file" class="form-control-file" id="stuImg" name="stuImg">
+    </div>
+
+    <br>
     <button type="submit" class="btn btn-primary" name="updateStuNameBtn">Update</button>
 
     <?php
