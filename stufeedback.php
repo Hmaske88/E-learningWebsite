@@ -35,7 +35,7 @@ if(isset($_REQUEST['submitFeedbackBtn']))
     else 
     {
         $fcontent = $_REQUEST["f_content"]; 
-        $sql = "INSERT feedback (f_content, stu_id) VALUES ('$fcontent', '$stuId')";
+        $sql = "INSERT INTO feedback (f_content, stu_id) VALUES ('$fcontent', '$stuId')";
         
         if($conn->query($sql) == TRUE)
         {

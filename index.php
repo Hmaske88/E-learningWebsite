@@ -61,26 +61,12 @@
         </div>
         <div class="modal-body">
             <!-- start Registration form -->
-            <!-- <form id="stuLoginForm">
-                <div class="mb-3">
-                  <label for="RegInputEmail1" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="RegInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                  <label for="LoginInputPassword1" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="LoginInputPassword1">
-                </div>
-            </form> -->
             <form id="stuRegForm" name="stuRegForm">
                 <div class="mb-3">
                     <label for="RegInputName" class="form-label">Name</label>
                     <small id="statusMsg1"></small>
                     <input type="text" class="form-control" name="name" id="RegInputName">
                 </div>
-                <!-- <div class="mb-3">
-                    <label for="RegUserId" class="form-label">User Id</label>
-                    <input type="text" class="form-control" id="RegUserId" name="RegUserId">
-                </div> -->
                 <div class="mb-3">
                   <label for="RegInputEmail1" class="form-label">Email address</label>
                   <small id="statusMsg2"></small>
@@ -91,31 +77,6 @@
                   <small id="statusMsg3"></small>
                   <input type="password" class="form-control" id="RegInputPassword1" name="RegInputPassword1">
                 </div>
-                <!-- <div class="mb-3">
-                  <label for="Address" class="form-label">Address</label>
-                  <input type="text" class="form-control" id="RegAddress">
-                </div>
-                <div class="mb-3">
-                  <label for="ZipCode" class="form-label">Zip Code</label>
-                  <input type="text" class="form-control" id="RegZipCode">
-                </div>
-                <div class="mb-3">
-                    <label for="sex">Sex</label><br>
-                    <input type="radio" id="male" name="sex">
-                    <label for="male">Male</label>
-                    <input type="radio" id="female" name="sex">
-                    <label for="male">Female</label>
-                </div>
-                <div class="mb-3">
-                    <label for="language">Language</label><br>
-                    <input type="checkbox" id="english" name="lan1">
-                    <label for="english">English</label>
-                    <input type="checkbox" id="N-english" name="lan2">
-                    <label for="N-english">Non English</label>
-                </div> -->
-                <!-- <div>
-                    <button type="submit">submit</button>
-                </div> -->
             </form>
             <!-- end registration form -->
         </div>
